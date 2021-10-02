@@ -1,0 +1,3 @@
+[submodule "dimg"]
+	path = dimg
+	url = https://github.com/thatfuckingbird/dimg.git
