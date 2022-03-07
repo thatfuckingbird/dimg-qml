@@ -12,7 +12,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 COMPONENTS Quick QuickControls2 Xml REQUIRED)
+find_package(Qt6 COMPONENTS Quick QuickControls2 Xml REQUIRED)
 
 qt_add_resources(QML_RESOURCES qml.qrc)
 add_executable(dimg-sample
@@ -28,5 +28,5 @@ set_target_properties(dimg-sample PROPERTIES
     CXX_EXTENSIONS NO
 )
 
-target_link_libraries(dimg-sample PRIVATE Qt5::Quick Qt5::Xml $<TARGET_OBJECTS:dimg::digikam_shims>
+target_link_libraries(dimg-sample PRIVATE Qt6::Quick Qt6::Xml $<TARGET_OBJECTS:dimg::digikam_shims>
     dimg::digikamcore dimg::DImg_PNG_Plugin dimg::DImg_TIFF_Plugin dimg::DImg_JPEG_Plugin dimg::DImg_QImage_Plugin dimg::DImg_HEIF_Plugin dimg::DImg_JPEG2000_Plugin dimg::DImg_ImageMagick_Plugin dimg::DImg_PGF_Plugin dimg::libraw dimg::DImg_RAW_Plugin)
